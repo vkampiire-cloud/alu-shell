@@ -1,0 +1,6 @@
+#!/bin/bash
+WATER_VAL=$((5#0$(echo -n "$WATER" | tr 'water' '01234')))
+STIR_VAL=$((5#0$(echo -n "$STIR" | tr 'stir.' '01234')))
+TOTAL=$((WATER_VAL + STIR_VAL))
+OCTAL=$(printf "%o" "$TOTAL")
+echo "$OCTAL" | tr '01234567' 'bestchol'
